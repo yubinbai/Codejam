@@ -1,7 +1,7 @@
 '''
 Created on Jun 6, 2013
 
-@author: Administrator
+@author: Yubin Bai
 '''
 def getSubsets(items):
     it = list(items)

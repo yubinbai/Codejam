@@ -6,7 +6,8 @@ Created on 2013-6-9
 import time
 from multiprocessing.pool import Pool
 from fenwick import FenwickTree
-parallelSolve = False
+parallelSolve = True
+
 
 def solve(par):
     K, n, queries = par
@@ -14,7 +15,7 @@ def solve(par):
     tree = FenwickTree(K)
     for i in range(K):
         tree.increase(i, 1)
-    
+
     pos = 0
     for i in range(K):
         # Compute the next position, after wrap-around.
@@ -35,7 +36,7 @@ def solve(par):
                 tree.increase(mid % K, -1)
                 break
             elif count < target:
-                left = mid 
+                left = mid
             else:
                 right = mid
 
@@ -44,13 +45,15 @@ def solve(par):
         result.append(str(circle[q - 1]))
     return ' '.join(result)
 
+
 class Solver:
+
     def __init__(self):
         self.fIn = open('input.txt')
         self.fOut = open('output.txt', 'w')
         self.numOfTests = int(self.fIn.readline().strip())
         self.results = []
-        
+
     def getInput(self):
         self.input = []
         for test in range(self.numOfTests):
@@ -58,8 +61,8 @@ class Solver:
             data = map(int, self.fIn.readline().strip().split())
             n = data[0]
             pos = data[1:]
-            self.input.append((K, n, pos)) 
-        
+            self.input.append((K, n, pos))
+
     def parallel(self):
         self.getInput()
         p = Pool(4)
@@ -83,11 +86,10 @@ class Solver:
             self.fOut.write("Case #%d: %s \n" % (test + 1, self.results[test]))
         self.fIn.close()
         self.fOut.close()
-    
+
 if __name__ == '__main__':
     solver = Solver()
     if parallelSolve:
         solver.parallel()
     else:
         solver.sequential()
-        

@@ -1,7 +1,7 @@
 '''
 Created on 2013-6-7
 
-@author: Administrator
+@author: Yubin Bai
 '''
 
 if __name__ == '__main__':

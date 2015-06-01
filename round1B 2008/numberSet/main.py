@@ -5,15 +5,19 @@ Created on 2013-6-6
 '''
 import time
 
+
 class UnionFind:
+
     def __init__(self, data):
         self.data = data
         self.p = None
+
     def find(self):
         p = self
         while p.p != None:
             p = p.p
         return p.data
+
     def union(self, other):
         otherP = other
         rank1 = 0
@@ -29,9 +33,10 @@ class UnionFind:
             selfP.p = otherP
         else:
             otherP.p = selfP
-        
+
+
 def solve(A, B, P):
-    # find the prime numbers 
+    # find the prime numbers
     primes = getPrimes(1000000)
     # make disjoint set
     allSets = {}
@@ -53,7 +58,8 @@ def solve(A, B, P):
     for i in range(A, B + 1):
         uniqueSets.add(allSets[i].find())
     return '%d' % len(uniqueSets)
-    
+
+
 def getPrimes(N):
     sieve = [True] * (N + 1)
     sieve[0] = sieve[1] = False
@@ -64,20 +70,20 @@ def getPrimes(N):
             for j in range(i * 2, N, i):
                 sieve[j] = False
     return results
-                
-    
+
+
 if __name__ == '__main__':
     fIn = open('input.txt')
     fOut = open('output.txt', 'w')
     numOfTests = int(fIn.readline())
-    
+
     millis1 = int(round(time.time() * 1000))
-    
+
     for test in range(numOfTests):
-        A, B, P = map(int, fIn.readline().strip().split()) 
+        A, B, P = map(int, fIn.readline().strip().split())
         result = solve(A, B, P)
         fOut.write("Case #%d: %s \n" % (test + 1, result))
-    
+
     millis2 = int(round(time.time() * 1000))
     print("Time in milliseconds: %d " % (millis2 - millis1))
 

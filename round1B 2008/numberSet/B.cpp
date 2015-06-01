@@ -32,7 +32,7 @@ int main() {
 
 
 	freopen("input.txt", "r", stdin);
-	freopen("B-large.out", "w", stdout);
+	freopen("output.txt", "w", stdout);
 
 	int tn, tt;
 	cin >> tn;

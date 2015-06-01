@@ -1,7 +1,7 @@
 '''
 Created on May 27, 2013
 
-@author: Administrator
+@author: Yubin Bai
 '''
 
 from bintrees import RBTree

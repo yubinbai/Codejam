@@ -1,7 +1,7 @@
 '''
 Created on 2013-5-12
 
-@author: Administrator
+@author: Yubin Bai
 '''
 def recur(currX, currY, targetX, targetY, step, result):
     if step > 500:

@@ -6,7 +6,8 @@ based on permutation and count solution by brute force
 '''
 import time
 infinity = 1 << 25
-        
+
+
 def solve(N, names, prices):
     result = []
     while True:
@@ -31,25 +32,26 @@ def solve(N, names, prices):
         for i in maxInverted:
             if names[i] < changeName:
                 changeI, changeName = i, names[i]
-        prices[changeI] = (max(prices[:changeI] + [0]) + min(prices[changeI + 1:] + [infinity])) / 2.0
+        prices[changeI] = (max(prices[:changeI] + [0]) + min(
+            prices[changeI + 1:] + [infinity])) / 2.0
         result.append(changeName)
 
     result.sort()
     return ' '.join(result)
-            
+
 if __name__ == '__main__':
     fIn = open('input.txt')
     fOut = open('output.txt', 'w')
     numOfTests = int(fIn.readline())
-    
+
     millis1 = int(round(time.time() * 1000))
-    
+
     for t in range(numOfTests):
         names = fIn.readline().strip().split()
         prices = [int(x) for x in fIn.readline().strip().split()]
         result = solve(len(prices), names, prices)
         fOut.write("Case #%d: %s \n" % (t + 1, result))
-    
+
     millis2 = int(round(time.time() * 1000))
     print("Time in milliseconds: %d " % (millis2 - millis1))
 

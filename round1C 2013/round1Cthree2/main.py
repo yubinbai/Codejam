@@ -1,7 +1,7 @@
 '''
 Created on 2013-5-12
 
-@author: Administrator
+@author: Yubin Bai
 '''
 MAX_DAY = 676061
 import heapq

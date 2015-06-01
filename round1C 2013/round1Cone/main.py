@@ -1,7 +1,7 @@
 '''
 Created on 2013-5-12
 
-@author: Administrator
+@author: Yubin Bai
 '''
 def nValue(str, n):
     vowels = ['a', 'e', 'i', 'o', 'u']

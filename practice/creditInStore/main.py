@@ -1,7 +1,7 @@
 '''
 Created on 2013-5-29
 
-@author: Administrator
+@author: Yubin Bai
 '''
 def getSum(currSum, values):
     size = len(values)

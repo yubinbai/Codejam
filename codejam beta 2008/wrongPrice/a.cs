@@ -26,6 +26,7 @@ int price[64];
 
 
 
+
 int Compare(const void* p1, const void*p2)
 
 {

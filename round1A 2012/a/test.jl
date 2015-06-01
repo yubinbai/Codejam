@@ -1,0 +1,1 @@
+println(mapreduce(BigInt, +, 1:10000000))

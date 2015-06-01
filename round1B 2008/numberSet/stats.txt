@@ -1,0 +1,20 @@
+Fri Jun 28 17:40:52 2013    pstat.dat
+
+         5302137 function calls (3639964 primitive calls) in 3.420 seconds
+
+   Ordered by: cumulative time
+   List reduced from 146 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.002    0.002    3.420    3.420 .\main3.py:5(<module>)
+        1    0.004    0.004    3.400    3.400 .\main3.py:95(sequential)
+        1    0.959    0.959    3.396    3.396 .\main3.py:11(solve)
+3940731/2278558    1.445    0.000    1.445    0.000 .\main3.py:21(find)
+        1    0.406    0.406    0.462    0.462 .\main3.py:60(getPrimes)
+   526776    0.455    0.000    0.455    0.000 .\main3.py:28(union)
+   129559    0.082    0.000    0.082    0.000 {range}
+   704687    0.048    0.000    0.048    0.000 {method 'append' of 'list' objects}
+        1    0.003    0.003    0.015    0.015 C:\Python27\lib\multiprocessing\__init__.py:44(<module>)
+        1    0.003    0.003    0.006    0.006 C:\Python27\lib\multiprocessing\util.py:35(<module>)
+
+

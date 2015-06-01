@@ -1,7 +1,7 @@
 '''
 Created on Jun 12, 2013
 
-@author: Administrator
+@author: Yubin Bai
 '''
 import pickle
 import time

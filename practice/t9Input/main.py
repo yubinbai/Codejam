@@ -1,7 +1,7 @@
 '''
 Created on 2013-5-29
 
-@author: Administrator
+@author: Yubin Bai
 '''
 def getInput(message):
     keyMap = {'a':'2', 'b':'22', 'c':'222', 'd':'3', 'e':'33', \
